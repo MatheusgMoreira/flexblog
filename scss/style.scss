@@ -1,0 +1,400 @@
+//Gerais
+@import "variaveis";
+
+//Fonte
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap");
+
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: $fonte;
+  color: $cor-1;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+//Superinfo
+.superinfo-bg {
+  background: $cor-2;
+  color: $cor-3;
+
+  .superinfo {
+    max-width: $container;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    a {
+      color: $cor-3;
+    }
+
+    p,
+    a {
+      margin: 0 10px 10px 10px;
+    }
+  }
+}
+
+//Menu
+.menu-bg {
+  background: $cor-4;
+
+  .menu {
+    max-width: $container;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    a {
+      color: $cor-3;
+    }
+
+    .menu-logo a {
+      font-size: 2.25em;
+      font-weight: bold;
+      margin: 0 10px;
+    }
+
+    .menu-nav {
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      a {
+        font-size: 1.35em;
+        display: block;
+        padding: 10px;
+        &:hover {
+          color: $cor-2;
+        }
+      }
+    }
+  }
+}
+
+//Introdução
+.introducao {
+  font-size: 3em;
+  line-height: 1;
+  max-width: $container;
+  margin: 0 auto;
+  padding: 60px 10px;
+}
+
+//Sobre
+.sobre {
+  border-top: 2px solid $cor-4;
+  border-bottom: 2px solid $cor-4;
+  max-width: $container;
+  margin: 0 auto;
+  padding: 60px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  .sobre-info {
+    flex: 2 1 300px;
+    margin: 0 10px;
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.25em;
+      line-height: 1.4;
+      margin-bottom: 1em;
+      color: $cor-5;
+    }
+  }
+
+  .sobre-img {
+    flex: 1 1 160px;
+    margin: 0 10px;
+  }
+}
+
+//Produtos
+.produtos {
+  max-width: $container;
+  margin: 60px auto;
+
+  h1 {
+    font-size: 3em;
+    margin: 0 10px 60px 10px;
+  }
+
+  .produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .produtos-item {
+      flex: 1 1 175px;
+      margin: 10px;
+
+      h2 {
+        font-size: 3em;
+        color: $cor-6;
+        background: $cor-7;
+        padding: 60px 20px;
+      }
+    }
+
+    .purple {
+      border-top: 8px solid $cor-8;
+    }
+
+    .pink {
+      border-top: 8px solid $cor-9;
+    }
+
+    .blue {
+      border-top: 8px solid $cor-10;
+    }
+  }
+}
+
+//Preços
+.preco {
+  background: $cor-7;
+  padding: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+
+  .preco-item {
+    flex: 1 1 260px;
+    border: 4px solid $cor-3;
+    padding: 20px;
+    margin: 10px;
+
+    h2 {
+      font-size: 3em;
+      color: $cor-6;
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    span {
+      max-width: 300px;
+      margin: 20px auto;
+      display: block;
+      font-size: 3em;
+      text-align: center;
+      font-weight: bold;
+      padding: 10px 0 5px 0;
+      border-top: 4px solid $cor-3;
+      border-bottom: 4px solid $cor-3;
+    }
+
+    sup {
+      font-size: 1.5rem;
+    }
+
+    ul {
+      max-width: 300px;
+      margin: 20px auto;
+      font-size: 1.25em;
+      line-height: 1;
+      font-style: italic;
+      color: $cor-5;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      &::after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: $cor-4;
+        border-radius: 50%;
+      }
+    }
+
+    a {
+      max-width: 300px;
+      display: block;
+      margin: 20px auto;
+      border: 4px solid;
+      color: $cor-1;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 2.25em;
+      padding: 15px 0;
+      text-align: center;
+    }
+
+    @media (max-width: 800px) {
+      &:nth-child(3) {
+        order: -2;
+      }
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+//Qualidade
+.qualidade {
+  max-width: $container;
+  margin: 60px auto;
+  display: flex;
+  flex-wrap: wrap;
+
+  .qualidade-item {
+    flex: 1 1 300px;
+    margin: 20px 10px;
+
+    h2 {
+      font-size: 2.25em;
+      color: $cor-6;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 8px;
+        height: 30px;
+        margin-right: 10px;
+        background: $cor-4;
+      }
+    }
+
+    &:nth-of-type(3n + 1) h2::before {
+      background: $cor-8;
+    }
+
+    &:nth-of-type(3n + 2) h2::before {
+      background: $cor-9;
+    }
+
+    &:nth-of-type(3n + 3) h2::before {
+      background: $cor-10;
+    }
+  }
+
+  p {
+    font-size: 1.25em;
+    line-height: 1.4;
+    color: $cor-5;
+  }
+}
+
+//Newsletter
+.newsletter {
+  background: $cor-7;
+  padding: 60px calc((100% - 960px) / 2);
+  display: flex;
+  flex-wrap: wrap;
+
+  .newsletter-info {
+    flex: 1 1 260px;
+    margin: 0 10px;
+
+    h1 {
+      font-size: 3em;
+      color: $cor-6;
+    }
+
+    p {
+      font-size: 1.25em;
+      font-size: italic;
+      max-width: 230px;
+      color: $cor-5;
+      margin-bottom: 10px;
+    }
+  }
+
+  .newsletter-form {
+    flex: 2 1 260px;
+    margin: 0 10px;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+
+    input {
+      flex: 3 1 200px;
+      font-size: 1.25em;
+      color: $cor-5;
+      font-style: italic;
+      font-family: $fonte;
+      border: 4px solid $cor-4;
+      background: transparent;
+      padding: 15px 10px;
+      margin: 0px;
+      border-radius: 0px;
+    }
+
+    button {
+      flex: 1 1 200px;
+      font-family: $fonte;
+      font-size: 2.25em;
+      font-weight: bold;
+      text-transform: uppercase;
+      background: $cor-4;
+      color: $cor-3;
+      margin: 0px;
+      cursor: pointer;
+      border: none;
+      padding: 15px 10px;
+
+      @media (max-width: 600px) {
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+
+//Footer
+.footer {
+  display: flex;
+  background-color: $cor-4;
+  height: 200px;
+  align-items: center;
+
+  p {
+    flex: 1;
+    text-align: center;
+    font-size: 2.25em;
+    color: $cor-2;
+  }
+}
